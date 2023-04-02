@@ -1,8 +1,11 @@
 import Link from "next/link";
 import { motion as m } from "framer-motion";
 import { container, item } from "../animation";
+import { useRouter } from "next/router";
 
 export default function Contact() {
+  const router = useRouter();
+
   return (
     <m.main
       animate={{ y: "0%" }}
@@ -14,6 +17,24 @@ export default function Contact() {
       }}
       className="text-gray-900 absolute top-0 left-0 w-full h-full bg-red-400 lg:px-48 px-16"
     >
+      <Link href="/">
+        <li
+          className={`cursor-pointer ${
+            router.pathname == "/" ? "underline" : ""
+          }`}
+        >
+          Home
+        </li>
+      </Link>
+      <Link href="/contact">
+        <li
+          className={`cursor-pointer ${
+            router.pathname == "/contact" ? "underline" : ""
+          }`}
+        >
+          Contact
+        </li>
+      </Link>
       <div className="my-96 p-1 font-archivo overflow-hidden ">
         <m.h1
           animate={{ y: 0 }}

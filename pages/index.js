@@ -1,9 +1,12 @@
 import Head from "next/head";
 import { motion as m } from "framer-motion";
 import { container, item } from "../animation";
+import Link from "next/link";
+import { useRouter } from "next/router";
 
 export default function Home() {
   const d = new Date();
+  const router = useRouter();
 
   return (
     <m.div
@@ -21,6 +24,24 @@ export default function Home() {
       </Head>
       <main>
         {/* /important to not forget the overflow hidden to make it appear at the mount  */}
+        <Link href="/">
+          <li
+            className={`cursor-pointer ${
+              router.pathname == "/" ? "underline" : ""
+            }`}
+          >
+            Home
+          </li>
+        </Link>
+        <Link href="/contact">
+          <li
+            className={`cursor-pointer ${
+              router.pathname == "/contact" ? "underline" : ""
+            }`}
+          >
+            Contact
+          </li>
+        </Link>
         <div className="my-96 p-1 font-archivo overflow-hidden ">
           <m.h1
             animate={{ y: 0 }}
