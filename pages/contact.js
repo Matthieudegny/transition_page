@@ -17,6 +17,27 @@ export default function Contact() {
       }}
       className="text-gray-900 absolute top-0 left-0 w-full h-full bg-red-400 lg:px-48 px-16"
     >
+      <main className=" relative min-h-screen flex-col justify-center items-center  ">
+        <div className="min-w-full h-40v mt-8 text-3xl font-playfair   ">
+          <h1>
+            Hello, I'm Matthieu, a front-end developer specialized, with modern
+            technologies built around the Javascript framework.
+          </h1>
+        </div>
+
+        <div className="min-w-full h-40v mt-8">
+          <h2>
+            As a front-end developer with expertise in React, Next.js, and
+            TypeScript, I'm passionate about crafting user-friendly interfaces
+            that bring ideas to life.
+          </h2>
+        </div>
+        <div className="min-w-full h-10v flex items-end justify-end">
+          <div className="">
+            ©2023 <span>Available for work from July</span>
+          </div>
+        </div>
+      </main>
       <Link href="/">
         <li
           className={`cursor-pointer ${
