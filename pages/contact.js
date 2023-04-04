@@ -17,6 +17,24 @@ export default function Contact() {
       }}
       className="text-gray-900 absolute top-0 left-0 w-full h-full bg-red-400 lg:px-48 px-16"
     >
+      <Link href="/">
+        <li
+          className={`cursor-pointer ${
+            router.pathname == "/" ? "underline" : ""
+          }`}
+        >
+          Home
+        </li>
+      </Link>
+      <Link href="/contact">
+        <li
+          className={`cursor-pointer ${
+            router.pathname == "/contact" ? "underline" : ""
+          }`}
+        >
+          Contact
+        </li>
+      </Link>
       <main className=" relative min-h-screen flex-col justify-center items-center  ">
         <div className="min-w-full h-40v mt-8 text-3xl font-playfair   ">
           <h1>
