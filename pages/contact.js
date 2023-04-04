@@ -35,6 +35,15 @@ export default function Contact() {
           Contact
         </li>
       </Link>
+      <Link href="/home">
+        <li
+          className={`cursor-pointer ${
+            router.pathname == "/home" ? "underline" : ""
+          }`}
+        >
+          HomeTest
+        </li>
+      </Link>
       <div className="my-96 p-1 font-archivo overflow-hidden ">
         <m.h1
           animate={{ y: 0 }}
